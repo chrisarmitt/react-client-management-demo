@@ -1,0 +1,55 @@
+.client-list .row-header {
+  font-weight: bold;
+  align-items: center;
+  padding: 10px 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.client-list .row:nth-child(odd) {
+  background-color: #eeeaea;
+}
+
+.client-list .row:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.client-list .row-body {
+  padding: 10px 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.client-list .wide {
+  flex: 1;
+}
+
+.client-list .narrow {
+  flex: 0 0 100px;
+}
+
+.wizard-container {
+  height: 450px;
+  position: relative;
+}
+
+.wizard-content {
+  overflow-y: auto;
+  height: calc(100% - 50px);
+}
+
+.wizard-navigation {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-row {
+  padding-top: 0.5em;
+  margin-left: 0;
+  margin-right: 0;
+}
