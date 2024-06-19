@@ -8,7 +8,7 @@ export const getClient = async (id: number) => {
 };
 
 export const getClients = async () => {
-  const response = await axios.get(`${API_URL}/clients`);
+  const response = await axios.get(`${API_URL}/client`);
   return response.data;
 };
 
