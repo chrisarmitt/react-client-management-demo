@@ -49,7 +49,6 @@
 }
 
 .details-row {
+  margin: 0 !important;
   padding-top: 0.5em;
-  margin-left: 0;
-  margin-right: 0;
 }

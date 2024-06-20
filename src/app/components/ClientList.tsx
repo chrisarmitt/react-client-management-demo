@@ -59,6 +59,11 @@ const ClientList: React.FC = () => {
           </div>
         </div>
       ))}
+      {clients.length == 0 && (
+        <div className="row row-body">
+          <div className="col wide">No client records</div>
+        </div>
+      )}
     </div>
   );
 };
