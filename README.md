@@ -18,6 +18,8 @@ The following ideas were / would be considered for future enhancement given time
 * Combining FE / BE repos into a single repo
 * Refactor / use of shared component library (if available)
 * Improved error handling / feedback
+* Improved logging (Datadog or similar)
+* Google Analytics
 * Standardised CSS / SCSS styling for consistency / code cleanliness
 * Github actions for CI/CD pipeline, prod, dev, test/uat env structure
 * Projen for project templating and configuration management for jest, package.json dependencies, eslint, GH Workflows etc.
