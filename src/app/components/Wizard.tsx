@@ -26,8 +26,13 @@ const Wizard: React.FC = () => {
 
   useEffect(() => {
     const fetchFundingSources = async () => {
-      const sources = await getFundingSources();
-      setFundingSources(sources);
+      try {
+        const sources = await getFundingSources();
+        setFundingSources(sources);
+      } catch (error) {
+        console.log("Error fetching funding sources", error);
+        navigate(PATH.Error);
+      }
     };
     fetchFundingSources();
   }, []);
@@ -115,9 +120,14 @@ const Wizard: React.FC = () => {
         ...client,
         dob: client.dob ? format(client.dob, "yyyy-MM-dd") : null,
       };
-      await createClient(newClient);
-      resetForm();
-      navigate(PATH.Home);
+      try {
+        await createClient(newClient);
+        resetForm();
+        navigate(PATH.Home);
+      } catch (error) {
+        console.log("Error creating client", error);
+        navigate(PATH.Error);
+      }
     }
   };
 

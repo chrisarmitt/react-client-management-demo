@@ -9,6 +9,7 @@ export const AppRoutes: React.FC = () => {
       <Route path={PATH.Root} element={<Navigate to={PATH.Home} />} />
       <Route path={PATH.Home} element={<Pages.Home />} />
       <Route path={PATH.AddClient} element={<Pages.AddClient />} />
+      <Route path={PATH.Error} element={<Pages.Error />} />
     </Routes>
   );
 };

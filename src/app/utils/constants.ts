@@ -6,6 +6,7 @@ export const Routes = {
   Root: "/",
   Home: "/home",
   AddClient: "/add-client",
+  Error: "/error",
 };
 
 export const APP_ROOT = "root";

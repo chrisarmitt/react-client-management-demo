@@ -1,22 +1,34 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import { getClients, deleteClient } from "../services/apiService";
-import { formatDateString } from "../utils/constants";
+import { formatDateString, Routes as PATH } from "../utils/constants";
 
 const ClientList: React.FC = () => {
   const [clients, setClients] = useState<any[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchClients();
   }, []);
 
   const fetchClients = async () => {
-    const data = await getClients();
-    setClients(data);
+    try {
+      const data = await getClients();
+      setClients(data);
+    } catch (error) {
+      console.log("Error", error);
+      navigate(PATH.Error);
+    }
   };
 
   const handleDelete = async (id: number) => {
-    await deleteClient(id);
-    fetchClients();
+    try {
+      await deleteClient(id);
+      fetchClients();
+    } catch (error) {
+      console.log(`Error deleting client:${id}`, error);
+      navigate(PATH.Error);
+    }
   };
 
   return (
